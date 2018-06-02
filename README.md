@@ -96,7 +96,7 @@ Tips:
 
                 - Link an external stylesheet and make all the pictures the same size.
 
-- Write `displayStats` function that writes your hero's name, health, weapontype, weapon damage to the page. Call it at the end of your script
+                - Write `displayStats` function that writes your hero's name, health, weapontype, weapon damage to the page. Call it at the end of your script
 
 ## Section 4 - Show me what you got
 

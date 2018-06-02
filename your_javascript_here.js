@@ -1,14 +1,14 @@
 // Variables
 var hero = {
-  name: "CriCri",
+  name: "Chrisforius",
   heroic: true,
   inventory:[
-    {type:"fire", damage:1},
+    {type:"Fire", damage:1},
     {type:"MegaSword", damage: 10}
   ],
   health: 10,
   weapon: {
-    type:"sharp",
+    type:"Knife",
     damage: 2}
   }
 
@@ -18,7 +18,7 @@ var hero = {
     inventory:[],
     health: 5,
     weapon: {
-      type:"fire",
+      type:"Fire",
       damage: 1}
     }
 
@@ -29,6 +29,7 @@ var hero = {
 
 function rest (creature) {
   creature.health = 10;
+  displayStats ()
   console.log(creature)
   return creature
 }
@@ -57,6 +58,7 @@ function doBattle (heroicCreature, creature) {
 
   while (heroicCreature.health>0 && creature.health>0) {
     dealDamage(heroicCreature, creature)
+    displayStats ()
     if (creature.health >0) {
       dealDamage(creature, heroicCreature)
     }
@@ -73,7 +75,18 @@ function doBattle (heroicCreature, creature) {
 }
 
 // UI
+var listElement = document.getElementById('hero');
 
 function displayStats () {
-  
+
+  var newStatListContent = [`Name: ${hero.name}`,`Health: ${hero.health}`, `Weapon: ${hero.weapon.type}`, `Damage points: ${hero.weapon.damage}`]
+  listElement.innerHTML ='<h3>Hero stats:</h3>'
+  for (var i = 0; i < newStatListContent.length; i++) {
+  var newStatListItem = document.createElement("li");
+  var newContentList = document.createTextNode(newStatListContent[i]);
+  newStatListItem.appendChild(newContentList);
+  listElement.appendChild(newStatListItem);
+  }
 }
+
+displayStats ()
