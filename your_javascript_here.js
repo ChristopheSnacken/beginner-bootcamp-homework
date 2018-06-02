@@ -1,6 +1,6 @@
 // Variables
 var hero = {
-  name: "",
+  name: "Heman",
   heroic: true,
   inventory:[
 
