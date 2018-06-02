@@ -7,8 +7,8 @@ var hero = {
   ],
   health: 10,
   weapon: {
-    type:"",
-    damage: 0}
+    type:"hand",
+    damage: 1}
   }
 
   var ogre = {
