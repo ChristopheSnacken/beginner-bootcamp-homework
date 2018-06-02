@@ -4,7 +4,8 @@ var hero = {
   heroic: true,
   inventory:[
     {type:"Fire", damage:1},
-    {type:"MegaSword", damage: 10}
+    {type:"MegaSword", damage: 10},
+    {type:"Knife", damage: 2}
   ],
   health: 10,
   weapon: {
@@ -29,7 +30,7 @@ var hero = {
 
 function rest (creature) {
   creature.health = 10;
-  displayStats ()
+  updateStats ()
   console.log(creature)
   return creature
 }
@@ -48,7 +49,7 @@ function dealDamage (attacker, defender) {
 function equipWeapon (creature, index) {
   creature.weapon = creature.inventory[index];
   creature.inventory.splice(index, 1);
-  displayStats ()
+  updateStats ()
   return creature
 }
 
@@ -59,7 +60,7 @@ function doBattle (heroicCreature, creature) {
 
   while (heroicCreature.health>0 && creature.health>0) {
     dealDamage(heroicCreature, creature)
-    displayStats ()
+    updateStats ()
     if (creature.health >0) {
       dealDamage(creature, heroicCreature)
     }
@@ -78,9 +79,21 @@ function doBattle (heroicCreature, creature) {
 // UI
 var listElement = document.getElementById('hero');
 
+var inventoryListString
+
+function displayInventory () {
+  for (var i = 0; i < hero.inventory.length; i++) {
+    var inventoryListUpdate = []
+    inventoryListUpdate.push(hero.inventory[i].type)
+    inventoryListString = inventoryListUpdate.join()
+    console.log(inventoryListString)
+  }
+}
+
+
 function displayStats () {
 
-  var newStatListContent = [`Name: ${hero.name}`,`Health: ${hero.health}`, `Weapon: ${hero.weapon.type}`, `Damage points: ${hero.weapon.damage}`]
+  var newStatListContent = [`Name: ${hero.name}`,`Health: ${hero.health}`, `Weapon: ${hero.weapon.type}`, `Damage points: ${hero.weapon.damage}`, `Inventory: ${inventoryListString}`]
   listElement.innerHTML ='<h3>Hero stats:</h3>'
   for (var i = 0; i < newStatListContent.length; i++) {
   var newStatListItem = document.createElement("li");
@@ -90,4 +103,9 @@ function displayStats () {
   }
 }
 
-displayStats ()
+function updateStats () {
+  displayStats ()
+  displayInventory ()
+}
+
+updateStats ()
