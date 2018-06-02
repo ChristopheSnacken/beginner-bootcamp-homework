@@ -5,9 +5,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>BB homework</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
         <h1>Good luck! You can do it!</h1>
+        <div class="buttons">
+          <img class="pictures" src="pictures/inn.jpg" alt="bed" onclick="rest(hero)">
+          <img class="pictures" src="pictures/weapon.png" alt="weapon" onclick="pickUpItem(hero,hero.weapon)">
+          <img class="pictures" src="pictures/Ogre.png" alt="foe" onclick="doBattle(hero,ogre)">
+          <img class="pictures" src="pictures/Knapsack.png" alt="knapsack" onclick="equipWeapon(hero,prompt(`Type in index number of weapon you want to equip yourself with:`))">
+        </div>
         <script src="your_javascript_here.js"></script>
         <script src="tests.js"></script>
     </body>

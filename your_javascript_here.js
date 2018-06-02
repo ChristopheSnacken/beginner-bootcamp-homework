@@ -2,7 +2,7 @@
 var hero = {
   name: "CriCri",
   heroic: true,
-  inventory:[],
+  inventory:["type: sword, damage: 3", "type: gun, damage: 10"],
   health: 20,
   weapon: {
     type:"sharp",
@@ -16,11 +16,13 @@ var hero = {
 
 function rest (creature) {
   creature.health = 10;
+  console.log(creature)
   return creature
 }
 
 function pickUpItem (creature, item) {
   creature.inventory.push(item);
+  console.log(item)
   return creature
 }
 
@@ -52,6 +54,7 @@ function doBattle (heroicCreature, creature) {
   else {
     alert("Hero is DEAD!")
   }
+console.log(hero.weapon)
 
 }
 
