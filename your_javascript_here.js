@@ -2,12 +2,25 @@
 var hero = {
   name: "CriCri",
   heroic: true,
-  inventory:["type: sword, damage: 3", "type: gun, damage: 10"],
-  health: 20,
+  inventory:[
+    {type:"fire", damage:1},
+    {type:"MegaSword", damage: 10}
+  ],
+  health: 10,
   weapon: {
     type:"sharp",
     damage: 2}
   }
+
+  var ogre = {
+    name: "BadAss",
+    heroic: false,
+    inventory:[],
+    health: 5,
+    weapon: {
+      type:"fire",
+      damage: 1}
+    }
 
 
 
@@ -49,15 +62,18 @@ function doBattle (heroicCreature, creature) {
     }
   }
   if (heroicCreature.health>0) {
+    console.log(hero.weapon)
+    console.log(hero.health)
     return heroicCreature
   }
   else {
     alert("Hero is DEAD!")
   }
-console.log(hero.weapon)
 
 }
 
-
-
 // UI
+
+function displayStats () {
+  
+}

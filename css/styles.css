@@ -2,8 +2,14 @@
   width: 90px;
   height: 100px;
   border: 2px solid purple
+  
 
 }
 .buttons {
   display: flex;
+
+}
+#hero {
+  display: flex;
+  margin-bottom: 10px;
 }
