@@ -48,6 +48,7 @@ function dealDamage (attacker, defender) {
 function equipWeapon (creature, index) {
   creature.weapon = creature.inventory[index];
   creature.inventory.splice(index, 1);
+  displayStats ()
   return creature
 }
 
