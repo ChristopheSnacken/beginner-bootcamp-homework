@@ -53,7 +53,7 @@ function equipWeapon (creature, index) {
   return creature
 }
 
-function doBattle (heroicCreature, creature) {
+function doBattle (heroicCreature, creature) {  
   if (!heroicCreature.heroic) {
     return null
   }
