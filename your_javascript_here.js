@@ -1,16 +1,14 @@
 // Variables
 var hero = {
-  name: "Chrisforius",
+  name: "",
   heroic: true,
   inventory:[
-    {type:"Fire", damage:1},
-    {type:"MegaSword", damage: 10},
-    {type:"Knife", damage: 2}
+
   ],
   health: 10,
   weapon: {
-    type:"Knife",
-    damage: 2}
+    type:"",
+    damage: 0}
   }
 
   var ogre = {
@@ -22,6 +20,16 @@ var hero = {
       type:"Fire",
       damage: 1}
     }
+
+  var dragon = {
+    name: "Dragon",
+    heroic: false,
+    inventory:[],
+    health: 100,
+    weapon: {
+      type:"Fire",
+      damage: 9}
+      }
 
 
 
@@ -37,6 +45,7 @@ function rest (creature) {
 
 function pickUpItem (creature, item) {
   creature.inventory.push(item);
+  updateStats ()
   console.log(item)
   return creature
 }
@@ -53,7 +62,7 @@ function equipWeapon (creature, index) {
   return creature
 }
 
-function doBattle (heroicCreature, creature) {  
+function doBattle (heroicCreature, creature) {
   if (!heroicCreature.heroic) {
     return null
   }
@@ -94,7 +103,7 @@ function displayInventory () {
 function displayStats () {
 
   var newStatListContent = [`Name: ${hero.name}`,`Health: ${hero.health}`, `Weapon: ${hero.weapon.type}`, `Damage points: ${hero.weapon.damage}`, `Inventory: ${inventoryListString}`]
-  listElement.innerHTML ='<h3>Hero stats:</h3>'
+  listElement.innerHTML =''
   for (var i = 0; i < newStatListContent.length; i++) {
   var newStatListItem = document.createElement("li");
   var newContentList = document.createTextNode(newStatListContent[i]);
@@ -109,3 +118,27 @@ function updateStats () {
 }
 
 updateStats ()
+
+input.addEventListener("keyup", function(event) {
+  event.preventDefault();
+  if (event.keyCode === 13) {
+    document.getElementById("buttonId").click();
+  }
+});
+
+//submit input field value
+function mySubmitFunction() {
+  const input = document.getElementById('input')
+
+
+    if(input.value ===""){
+      alert("Moron! Enter at least a 1 character");
+    } else {
+      var x = document.getElementById("input").value;
+
+      hero.name = x ;
+      updateStats ()
+      input.value= ''
+
+    }
+}

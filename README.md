@@ -102,8 +102,8 @@ Tips:
 
 - Write a `displayInventory` function that iterates over your hero's inventory and writes it to the page. Add a couple of weapons to you hero's inventory to see if it works. Call it at the end of your script
 
-- Write an `updateStats` function that calls `displayStats` and `displayInventory`. Call `updateStats` when a picture is clicked in addition to the function that is already being called.
+                - Write an `updateStats` function that calls `displayStats` and `displayInventory`. Call `updateStats` when a picture is clicked in addition to the function that is already being called.
 
-- Create a form that allow users to change the name of their hero.
+                - Create a form that allow users to change the name of their hero.
 
-- When an enemy or weapon gets clicked it gets deleted from the DOM
+                - When an enemy or weapon gets clicked it gets deleted from the DOM

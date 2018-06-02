@@ -13,16 +13,21 @@
           <div>
             <img class="pictures" src="pictures/hero.jpg" alt="hero">
           </div>
-          <div id="hero">
+          <div id=stat>
             <h3>Hero stats:</h3>
-            <ol>
+            <input id='input' type= "text" value="" name= "myText" placeholder="Fill in your wicked name!">
+            <button id='buttonId' onclick="mySubmitFunction()">Submit</button>
+            <ol id="hero">
             </ol>
           </div>
         </div>
         <div class="buttons">
           <img class="pictures" src="pictures/inn.jpg" alt="bed" onclick="rest(hero)">
-          <img class="pictures" src="pictures/weapon.png" alt="weapon" onclick="pickUpItem(hero,hero.weapon)">
-          <img class="pictures" src="pictures/Ogre.png" alt="foe" onclick="doBattle(hero,ogre);this.remove()">
+          <img class="pictures" src="pictures/stick.png" alt="stick" onclick="pickUpItem(hero,{type:`Stick`,damage: 1});this.remove()">
+          <img class="pictures" src="pictures/Fire.png" alt="fire" onclick="pickUpItem(hero,{type:`Fire`,damage: 2});this.remove()">
+          <img class="pictures" src="pictures/megaSword.jpg" alt="stick" onclick="pickUpItem(hero,{type:`Mega Sword`,damage: 9});this.remove()">
+          <img class="pictures" src="pictures/Ogre.png" alt="ogre" onclick="doBattle(hero,ogre);this.remove()">
+          <img class="pictures" src="pictures/dragon.jpg" alt="dragon" onclick="doBattle(hero,dragon);this.remove()">
           <img class="pictures" src="pictures/Knapsack.png" alt="knapsack" onclick="equipWeapon(hero,prompt(`Type in index number of weapon you want to equip yourself with:`))">
         </div>
         <script src="your_javascript_here.js"></script>
