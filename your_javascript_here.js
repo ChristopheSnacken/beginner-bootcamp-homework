@@ -91,12 +91,12 @@ var listElement = document.getElementById('hero');
 var inventoryListString
 
 function displayInventory () {
+  var inventoryListUpdate = []
   for (var i = 0; i < hero.inventory.length; i++) {
-    var inventoryListUpdate = []
-    inventoryListUpdate.push(hero.inventory[i].type)
-    inventoryListString = inventoryListUpdate.join()
-    console.log(inventoryListString)
+    inventoryListUpdate.push(`${i}: ${hero.inventory[i].type}`)
   }
+  inventoryListString = inventoryListUpdate.join()
+
 }
 
 
@@ -113,8 +113,9 @@ function displayStats () {
 }
 
 function updateStats () {
-  displayStats ()
+
   displayInventory ()
+  displayStats ()
 }
 
 updateStats ()
