@@ -22,13 +22,26 @@
           </div>
         </div>
         <div class="buttons">
-          <img class="pictures" src="pictures/inn.jpg" alt="bed" onclick="rest(hero)">
-          <img class="pictures" src="pictures/stick.png" alt="stick" onclick="pickUpItem(hero,{type:`Stick`,damage: 2});this.remove()">
-          <img class="pictures" src="pictures/Fire.png" alt="fire" onclick="pickUpItem(hero,{type:`Fire`,damage: 4});this.remove()">
-          <img class="pictures" src="pictures/megaSword.jpg" alt="stick" onclick="pickUpItem(hero,{type:`Mega Sword`,damage: 9});this.remove()">
-          <img class="pictures" src="pictures/Ogre.png" alt="ogre" onclick="doBattle(hero,ogre);this.remove()">
-          <img class="pictures" src="pictures/dragon.jpg" alt="dragon" onclick="doBattle(hero,dragon);this.remove()">
-          <img class="pictures" src="pictures/Knapsack.png" alt="knapsack" onclick="equipWeapon(hero,prompt(`Type in index number of weapon you want to equip yourself with:`))">
+          <div class = "Menu">
+            <h3>Herberg</h3>
+            <img class="pictures" src="pictures/inn.jpg" alt="bed" onclick="rest(hero)">
+          </div>
+          <div class = "Menu">
+            <h3>Inventory</h3>
+            <img class="pictures" src="pictures/Knapsack.png" alt="knapsack" onclick="equipWeapon(hero,prompt(`Type in index number of weapon you want to equip yourself with:`))">
+          </div>
+          <div class = "Menu">
+            <h3>Stuff on the road</h3>
+            <img class="pictures" src="pictures/stick.png" alt="stick" onclick="pickUpItem(hero,{type:`Stick`,damage: 2});this.remove()">
+            <img class="pictures" src="pictures/Fire.png" alt="fire" onclick="pickUpItem(hero,{type:`Fire`,damage: 4});this.remove()">
+            <img class="pictures" src="pictures/megaSword.jpg" alt="stick" onclick="pickUpItem(hero,{type:`Mega Sword`,damage: 9});this.remove()">
+          </div>
+          <div class = "Menu">
+            <h3>Foes</h3>
+            <img class="pictures" src="pictures/Ogre.png" alt="ogre" onclick="doBattle(hero,ogre);this.remove()">
+            <img class="pictures" src="pictures/dragon.jpg" alt="dragon" onclick="doBattle(hero,dragon);this.remove()">
+          </div>
+
         </div>
         <script src="your_javascript_here.js"></script>
         <script src="tests.js"></script>

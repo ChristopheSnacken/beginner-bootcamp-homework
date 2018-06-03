@@ -9,6 +9,7 @@
 .buttons {
   display: flex;
 
+
 }
 .wrapper {
   display: flex;
@@ -18,12 +19,19 @@
 
 
 }
+.Menu {
+  margin: 10px; 
+
+
+}
 #stat {
   margin-left: 20px;
 
 }
 img {
   border-radius: 5px;
+
+
 }
 li {
   list-style: none;
